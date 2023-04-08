@@ -1,0 +1,696 @@
+body{
+  background-color: black;
+  font-family: 'Playfair Display', serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header Begins */
+
+header{
+  background-color: black;
+  height: 60px;
+}
+
+
+header ul{
+  list-style-type: none;
+  margin: 0;
+  margin-right: 30px;
+}
+
+header li{
+  float: right;
+}
+
+header a{
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+}
+
+header a:hover{
+  color: rgb(233, 51, 142);
+  transition: color 1s ease-out;
+}
+
+
+header h1{
+  color: rgb(233, 51, 142);
+}
+
+.underline {
+  display: inline-block;
+  position: relative;
+  color: rgb(233, 51, 142);
+}
+
+.underline:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(233, 51, 142);
+  transform-origin: center;
+  transition: transform 0.25s ease-out;
+}
+
+.underline:hover:after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+/* Header Ends */
+
+/* Beginning of typing effect on name */
+main h2{
+  animation: animated-text 2s steps(29,end)  1 normal both,
+  animated-cursor 700ms steps(25,end) infinite;
+  border-right: solid 2px white;
+  white-space: nowrap;
+  overflow: hidden;    
+  color: white;
+}
+
+/* text animation */
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 70%}
+}
+/* cursor animations */
+@keyframes animated-cursor{
+  from{border-right-color: white;}
+  to{border-right-color: transparent;}
+}
+/* Ending of typing effect on name */
+
+
+/* Main Begins */
+main{
+ display: flex; 
+ width: 100%;
+}
+
+main h2, p{
+  color: white;
+}
+
+.flower{
+  margin-right: 100px;
+  margin-top: 100px;
+  margin-left: 250px;
+}
+
+.text{
+  margin-top: 50px;
+  margin-left: 100px;
+  font-size: xx-large;
+  text-align: justify;
+  width: 40%;
+}
+
+
+main .button{
+  background-color: rgb(233, 51, 142);
+  font-size: large;
+  color: white;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  border: none;
+}
+
+main a{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text a:hover{
+  background-color: white;
+  transition: background-color 1s ease-out;
+  transition: color 1s ease-out;
+  color: rgb(233, 51, 142);
+}
+
+
+/* Flower Animation Begins  */
+@keyframes showPetals {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.flower {
+  display: grid;
+  grid-template-columns: repeat(6, 50px);
+  grid-template-rows: repeat(6, 50px);
+}
+
+.small-petal {
+  animation: 1000ms showPetals linear forwards;
+  background-image: linear-gradient(to left, rgba(255, 155, 195, 0.8) 0%, rgb(233, 51, 142, .6) 100%);
+  opacity: 0;
+}
+
+.small-petal1 {
+  animation-delay: 200ms;
+  border-radius: 100% 0; 
+  grid-column: 4/6;
+  grid-row: 2/4;
+}
+
+.small-petal2 {
+  animation-delay: 400ms;
+  border-radius: 100% 0;
+  grid-column: 4/6;
+  grid-row: 3/5;
+  transform: rotate(45deg) translate(0.8rem, -0.8rem);
+}
+
+.small-petal3 {
+  animation-delay: 600ms;
+  border-radius: 0 100%;
+  grid-column: 4/6;
+  grid-row: 4/6;
+}
+
+.small-petal4 {
+  animation-delay: 800ms;
+  border-radius: 100% 0;
+  grid-column: 3/5;
+  grid-row: 3/5;
+  transform: rotate(135deg) translate(3.2rem, -3.2rem);
+}
+
+.small-petal5 {
+  animation-delay: 1000ms;
+  border-radius: 100% 0;
+  grid-column: 2/4;
+  grid-row: 4/6;
+}
+
+.small-petal6 {
+  animation-delay: 1200ms;
+  border-radius: 100% 0;
+  grid-column: 2/4;
+  grid-row: 3/5;
+  transform: rotate(45deg) translate(-0.6rem, 0.6rem);
+}
+
+.small-petal7 {
+  animation-delay: 1400ms;
+  border-radius: 0 100%;
+  grid-column: 2/4;
+  grid-row: 2/4;
+}
+
+.small-petal8 {
+  animation-delay: 1600ms;
+  border-radius: 100% 0;
+  grid-column: 3/5;
+  grid-row: 1/3;
+  transform: rotate(135deg) translate(1.7rem, -1.7rem);
+}
+/* Flower Animation Ends */
+/* Main Ends */
+
+/* About Begins */
+.about2{
+  background-color:rgb(17, 16, 16);
+  height: 650px;
+  width: 100%;
+}
+
+#About{
+  color: white;
+  margin-left: 200px;
+  margin-top: 110px;
+  height: 70%;
+  width: 70%;
+}
+
+#About h2{
+  font-size: xx-large;
+  color: rgb(233, 51, 142);
+}
+
+#About h3{
+  color: rgb(233, 51, 142);
+}
+
+#About p{
+  font-size: larger;
+  text-align: justify;
+}
+
+#About img{
+  float: left;
+  margin-right: 40px;
+  border-radius: 20px;
+  height: 400px;
+  width: 270px;
+  margin-top: 130px;
+}
+
+#About ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#About li{
+  flex-basis: 25%;
+}
+
+#About li::marker{
+  color: rgb(233, 51, 142);
+}
+/* About Ends */
+
+/* Project Begins */
+#Projects{
+  text-align: center;
+  margin-top: 120px;
+}
+
+#Projects h2{
+  color: rgb(233, 51, 142);
+  font-size: xx-large;
+}
+
+#Projects p{
+  font-size: large;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 350px;
+  width: 300px;
+  border-radius: 5px;
+  background-color:rgb(17, 16, 16);
+  margin: 30px;
+  text-align: justify;
+  padding: 30px;
+}
+
+.card h2{
+  text-align: center;
+}
+
+.card h3{
+  font-size: x-large;
+  color: rgb(233, 51, 142);
+  text-align: center;
+}
+
+
+.container button{
+  background-color: rgb(233, 51, 142);
+  font-size: medium;
+  color: white;
+  height: 40px;
+  width: 110px;
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  margin-top: 45px;
+}
+
+.button1{
+  background-color: rgb(233, 51, 142);
+  font-size: medium;
+  color: white;
+  height: 40px;
+  width: 110px;
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  margin-top: 45px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+  
+  
+}
+
+.button1:hover{
+  background-color: white;
+  transition: background-color 1s ease-out;
+  transition: color 1s ease-out;
+  color: rgb(233, 51, 142);
+}
+
+
+button:hover{
+  background-color: white;
+  transition: background-color 1s ease-out;
+  transition: color 1s ease-out;
+  color: rgb(233, 51, 142);
+}
+
+.icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(233, 51, 142);
+  margin: 0 10px;
+  margin-top: 30px;
+}
+
+.icons i{
+  margin-right: 3px;
+}
+/* Project Ends */
+
+/* Experience Begins */
+.expe{
+  background-color:rgb(17, 16, 16);
+  height: 650px;
+  width: 100%;
+}
+
+#Experience{
+  margin-top: 130px;
+}
+
+#Experience h2{
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+}
+
+#Experience h3{
+  color: white;
+  text-align: center;
+}
+
+
+
+#exp {
+  max-width: 700px;
+  margin: auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+section.exp {
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+#exp ul {
+  text-align: left;
+}
+.transition, p, ul li i:before, ul li i:after {
+  transition: all 0.3s;
+}
+
+#exp .no-select, #exp h2 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+
+
+#exp p {
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.45;
+  overflow: hidden;
+  max-height: 250px;
+  will-change: max-height;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 5px;
+  margin-bottom: 15px;
+  transition: .3s opacity, .6s max-height;
+  hyphens: auto;
+  z-index: 2;
+}
+
+#exp ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+#exp ul li {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  background: rgb(233, 51, 142);
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 5px;
+}
+#exp ul li + li {
+  margin-top: 15px;
+}
+#exp ul li:last-of-type {
+  padding-bottom: 0;
+}
+#exp ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 28px;
+  right: 15px;
+}
+#exp ul li i:before, ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  width: 3px;
+  height: 9px;
+}
+#exp ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+#exp ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+#exp ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  touch-action: manipulation;
+}
+#exp ul li input[type=checkbox]:checked ~ h2 {
+  color: #000;
+}
+#exp ul li input[type=checkbox]:checked ~ p {
+  /*margin-top: 0;*/
+  max-height: 0;
+  transition: .3s;
+  opacity: 0;
+  /*transform: translate(0, 50%);*/
+}
+#exp ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+#exp ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+
+#Experience i{
+  color: rgb(233, 51, 142);
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+/* Experience Ends */
+
+/* Services Begin */
+#Services{
+  margin-top: 80px;
+}
+
+#Services i{
+  color: rgb(233, 51, 142);
+  font-size: 48px;
+}
+
+#Services h2{
+  text-align: center;
+  color: rgb(233, 51, 142);
+  font-size: xx-large;
+}
+
+#Services h3{
+  text-align: center;
+  color: rgb(233, 51, 142);
+}
+
+#Services p{
+  text-align: justify;
+  font-size: large;
+}
+
+.serv{
+  width: 40%;
+  margin: 0 auto;
+}
+
+.serv-icons{
+  height: 300px;
+  width: 300px;
+  border-radius: 5px;
+  background-color:rgb(17, 16, 16);
+  margin: 30px;
+  text-align: center;
+  padding: 30px;
+}
+
+.services{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Serices End */
+
+/* Contact Begins */
+.con{
+  background-color:rgb(17, 16, 16);
+  height: 750px;
+  width: 100%;
+}
+
+#Contact{
+  margin-top: 120px;
+}
+
+#Contact h2{
+  text-align: center;
+  color: rgb(233, 51, 142);
+  font-size: xx-large;
+}
+
+
+.form{
+  width:540px;
+  height:600px;
+  background-color: black;
+  border-radius:8px;
+  padding:20px 30px;
+  position:relative;
+  margin: 0 auto;
+}
+
+.form p{
+  font-size: medium;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  box-sizing:border-box;
+  background:none;
+  outline:none;
+  border:0;
+  font-family: 'Playfair Display', serif;
+  transition:all .3s;
+  border-bottom:2px solid rgb(233, 51, 142);
+  color: white;
+}
+
+.message{
+  border-top: 2px solid rgb(233, 51, 142);
+  border-left: 2px solid rgb(233, 51, 142);
+  border-right: 2px solid rgb(233, 51, 142);
+  border-bottom: rgb(233, 51, 142);
+  padding-top: 100px;
+}
+
+
+#Contact button{
+  float:right;
+  padding:8px 12px;
+  margin:8px 0 0;
+  background-color: rgb(233, 51, 142);
+  color: white;
+  transition:all .3s;
+}
+
+#Contact button:hover{
+  background: white;
+  color: rgb(233, 51, 142);
+}
+/* Contact Ends */
+
+/* Footer Begins */
+#Footer{
+  margin-top: 50px;
+
+}
+
+#Footer i{
+  color: rgb(233, 51, 142);
+  font-size: 30px;
+  margin: 20px;
+}
+
+#Footer h3{
+  color: rgb(233, 51, 142);
+  text-align: center;
+  font-size: x-large;
+}
+
+#Footer p{
+  text-align: center;
+}
+
+.socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer Ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
